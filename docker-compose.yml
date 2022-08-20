@@ -2,12 +2,13 @@ version: '3'
 
 services:
   minidlna:
-    image: pauloromeira/minidlna
+    build:
+      context: .
+    image: pauloromeira/minidlna:local
     container_name: minidlna
     network_mode: host
     restart: unless-stopped
     volumes:
-      - /your/Videos/folder/:/media/Videos
-      # - /your/Music/folder/:/media/Music
-      # - /your/Pictures/folder/:/media/Pictures
-      # - /your/minidlna.conf:/etc/minidlna.conf
+      - ./media/Videos:/media/Videos
+      - ./media/Music:/media/Music
+      - ./media/Pictures:/media/Pictures

@@ -8,7 +8,7 @@ RUN apk --no-cache add minidlna
 ADD minidlna.conf /etc/minidlna.conf
 
 # Copy entrypoint
-COPY --chmod=755 entrypoint.sh /usr/bin/
+COPY entrypoint.sh /usr/bin/
 
 EXPOSE 1900/udp
 EXPOSE 8200
