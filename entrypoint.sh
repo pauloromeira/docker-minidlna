@@ -1,7 +1,5 @@
 #!/bin/sh
 
-if [ -e /run/minidlna/minidlna.pid ]; then
-    rm /run/minidlna/minidlna.pid
-fi
+rm -f /run/minidlna/minidlna.pid
 
 exec /usr/sbin/minidlnad -S
