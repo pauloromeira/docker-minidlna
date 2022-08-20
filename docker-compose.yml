@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  minidlna:
+    image: pauloromeira/minidlna
+    container_name: minidlna
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - /your/Videos/folder/:/media/Videos
+      # - /your/Music/folder/:/media/Music
+      # - /your/Pictures/folder/:/media/Pictures
+      # - /your/minidlna.conf:/etc/minidlna.conf
