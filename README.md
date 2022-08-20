@@ -7,7 +7,7 @@ Config file man page: [minidlna.conf](https://manpages.ubuntu.com/manpages/bioni
 This image is based on Alpine Linux.
 
 ## Usage
-Place your media files under directories: `media/{Music,Pictures,Videos}`.
+Clone this repository and place your media files under directories: `media/{Music,Pictures,Videos}`.
 
 Start service:
 ```sh
@@ -23,3 +23,8 @@ Follow logs:
 ```sh
 make logs
 ```
+
+## Requirements
+- [Docker Engine](https://docs.docker.com/engine/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [GNU Make](https://www.gnu.org/software/make/) (optional)
