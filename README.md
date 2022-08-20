@@ -7,18 +7,19 @@ Config file man page: [minidlna.conf](https://manpages.ubuntu.com/manpages/bioni
 This image is based on Alpine Linux.
 
 ## Usage
+Place your media files under directories: `media/{Music,Pictures,Videos}`.
 
-Start
+Start service:
 ```sh
 make  # equivalent to: make build && make up
 ```
 
-Terminate
+Terminate service:
 ```sh
 make down
 ```
 
-Follow logs
+Follow logs:
 ```sh
 make logs
 ```
