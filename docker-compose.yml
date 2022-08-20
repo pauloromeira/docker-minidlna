@@ -9,6 +9,6 @@ services:
     network_mode: host
     restart: unless-stopped
     volumes:
-      - ./media/Videos:/media/Videos
-      - ./media/Music:/media/Music
-      - ./media/Pictures:/media/Pictures
+      - ./media/Music:/opt/minidlna/media/Music
+      - ./media/Pictures:/opt/minidlna/media/Pictures
+      - ./media/Videos:/opt/minidlna/media/Videos
