@@ -1,23 +1,24 @@
-## MiniDLNA
+## MiniDLNA - Docker Image
 
 [MiniDLNA](https://sourceforge.net/projects/minidlna/) (renamed as ReadyMedia) is a simple media server software, with the aim of being fully compliant with DLNA/UPnP-AV clients.
 
-## MiniDLNA Docker Image
+Config file man page: [minidlna.conf](https://manpages.ubuntu.com/manpages/bionic/man5/minidlna.conf.5.html).
 
 This image is based on Alpine Linux.
 
 ## Usage
 
-Example:
+Start
+```sh
+make  # equivalent to: make build && make up
+```
 
-    docker run -d --name minidlna \
-      --net=host \
-      -v <PATH_TO_MUSIC_DIR>:/opt/Music \
-      -v <PATH_TO_VIDEOS_DIR>:/opt/Videos \
-      -v <PATH_TO_PICUTRES_DIR>:/opt/Pictures \
-      pauloromeira/minidlna
+Terminate
+```sh
+make down
+```
 
-
-If you want to change config file, make your own config file using this [man page](https://manpages.ubuntu.com/manpages/bionic/man5/minidlna.conf.5.html).
-
-Then, bind a volume as: /your/minidlna.conf:/etc/minidlna.conf
+Follow logs
+```sh
+make logs
+```
