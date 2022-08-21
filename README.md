@@ -9,6 +9,12 @@ This image is based on Alpine Linux.
 ## Usage
 Clone this repository and place your media files under directories: `media/{Music,Pictures,Videos}`.
 
+Alternatively, you can set custom media directories by copying and editing the `.env-example` file:
+```sh
+cp .env-example .env
+$EDITOR .env
+```
+
 Start service:
 ```sh
 make  # equivalent to: make build && make up

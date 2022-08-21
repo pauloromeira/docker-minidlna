@@ -1,3 +1,4 @@
+---
 version: '3'
 
 services:
@@ -9,6 +10,6 @@ services:
     network_mode: host
     restart: unless-stopped
     volumes:
-      - ./media/Music:/opt/minidlna/media/Music
-      - ./media/Pictures:/opt/minidlna/media/Pictures
-      - ./media/Videos:/opt/minidlna/media/Videos
+      - "${MUSIC_DIR-./media/Music}:/opt/minidlna/media/Music"
+      - "${PICTURES_DIR-./media/Pictures}:/opt/minidlna/media/Pictures"
+      - "${VIDEOS_DIR-./media/Videos}:/opt/minidlna/media/Videos"
